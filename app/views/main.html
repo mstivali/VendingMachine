@@ -1,42 +1,47 @@
-<!-- <div class="navbar navbar-inverse navbar-fixed-left">
-  <a class="navbar-brand">Make Selection</a>
-  <ul class="nav navbar-nav">
-    <li ng-if="$ctrl.products" ng-repeat="product in $ctrl.products">
-      <a><img ng-click="$ctrl.select(product)" ng-src="{{product.smallImage}}"></a>
-    </li>
-  </ul>
-</div> -->
+
 <menu products="$ctrl.products" selected-product="$ctrl.selectedProduct"></menu>
 
 <div class="container">
   <div class="page-header">
+
     <h3>Payments<small> Add Coins or Authorize Credit Card</small></h3>
-    <button>+1&#162;</button>
-    <button>+5&#162;</button>
-    <button>+10&#162;</button>
-    <button>+25&#162;</button>
-    <p>Balance: $0.00<br><br>
-      <input placeholder="Credit Card Number"><button>Authorize</button>
-    </div>
-    <div class="row">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Selected Product</h3>
-        </div>
-        <div class="panel-body">
-          <div class="media">
-            <div class="media-left media-middle">
-              <img ng-if="$ctrl.products" class="media-object" ng-src="{{$ctrl.selectedProduct.largeImage}}">
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">{{$ctrl.selectedProduct.name}}</h4>
-              <p>Price: {{$ctrl.selectedProduct.price | currency:'$'}}<br>
-                 Qty Remaining: {{$ctrl.selectedProduct.qty}}</p>
-                 <br>
-                 <button>Dispense</button>
+    <button ng-click="$ctrl.addCoin('penny')">+1&#162;</button>
+    <button ng-click="$ctrl.addCoin('nickel')">+5&#162;</button>
+    <button ng-click="$ctrl.addCoin('dime')">+10&#162;</button>
+    <button ng-click="$ctrl.addCoin('quarter')">+25&#162;</button>
+    <button ng-click="$ctrl.returnCoins()">Return Coins</button>
+    <p>Balance: {{$ctrl.balance | currency:'$'}}<br>
+
+
+    <form ng-submit="$ctrl.authorize($ctrl.creditCardNumber)">
+      <input ng-model="$ctrl.creditCardNumber" placeholder="Credit Card Number">
+      <button type="submit">Authorize</button>
+      <button ng-click="$ctrl.cancel()" type="reset">Cancel</button>
+      <strong><p ng-if="$ctrl.creditAuthorized === 1" style="color:green;">Authorized</p></strong>
+      <strong><p ng-if="$ctrl.creditAuthorized === 2" style="color:red;">Invalid Card Number</p></strong>
+      <span us-spinner="{radius:5, width:5, length: 10}" spinner-key="spinner"></span>
+    </form>
+
+  </div>
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Selected Product</h3>
+      </div>
+      <div class="panel-body">
+        <div class="media">
+          <div class="media-left media-middle">
+            <img ng-if="$ctrl.products" class="media-object" ng-src="{{$ctrl.selectedProduct.largeImage}}">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{$ctrl.selectedProduct.name}}</h4>
+            <p>Price: {{$ctrl.selectedProduct.price | currency:'$'}}<br>
+              Qty Remaining: {{$ctrl.selectedProduct.qty}}</p>
+              <br>
+              <button>Dispense</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+</div>
