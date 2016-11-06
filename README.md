@@ -45,6 +45,7 @@ Software Requirements:
 To run VendingMachine solution, execute the following commands:
 
 $ cd Vending Machine
+
 $ ./install.sh
 
 
