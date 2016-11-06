@@ -37,8 +37,11 @@ dispense change
 Solution:
 
 Required tools:
+
 1) nodeJS and npm
+
 2) bower cli
+
 3) grunt cli
 
 # vending-machine
