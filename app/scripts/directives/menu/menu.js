@@ -4,7 +4,9 @@
  * @ngdoc directive
  * @name vendingMachineApp.directive:menu
  * @description
- * # menu
+ * # menu displays product images and sets
+ * # selected product in parent controller
+ * # to be displayed by detail view
  */
 angular.module('vendingMachineApp')
   .directive('menu', function () {
