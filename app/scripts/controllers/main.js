@@ -8,15 +8,24 @@
  * Controller of the vendingMachineApp
  */
 angular.module('vendingMachineApp')
-  .controller('MainCtrl', function ($http) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function (MainService) {
 
-    $http.get('content.json').then(function(response) {
-      console.log(response.data);
-    });
+    var self = this;
+
+    init();
+
+    self.products = [];
+    self.selectedProduct = {};
+
+    self.select = function(product) {
+      self.selectedProduct = product;
+    };
+
+    function init() {
+      MainService.getProducts().then(function(products) {
+        self.products = products;
+        self.selectedProduct = self.products[0]
+      });
+    }
 
   });

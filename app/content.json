@@ -59,7 +59,7 @@
     "id": 8,
     "name": "Fanta",
     "smallImage": "images/fanta_sm.png",
-    "largeImage": "images/fanta/png",
+    "largeImage": "images/fanta.png",
     "qty": 5,
     "price": 1.00
   },

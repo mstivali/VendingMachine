@@ -1,16 +1,9 @@
 <div class="navbar navbar-inverse navbar-fixed-left">
   <a class="navbar-brand">Make Selection</a>
   <ul class="nav navbar-nav">
-    <li><img ng-src="images/cocacola_sm.png"</li>
-    <li><img ng-src="images/coke-zero_sm.png"</li>
-    <li><img ng-src="images/diet-coke_sm.png"</li>
-    <li><img ng-src="images/mirinda_sm.png"</li>
-    <li><img ng-src="images/nescafe_sm.png"</li>
-    <li><img ng-src="images/sprite_sm.png"</li>
-    <li><img ng-src="images/heineken_sm.png"</li>
-    <li><img ng-src="images/fanta_sm.png"</li>
-    <li><img ng-src="images/corona_sm.png"</li>
-    <li><img ng-src="images/duff_sm.png"</li>
+    <li ng-if="$ctrl.products" ng-repeat="product in $ctrl.products">
+      <a><img ng-click="$ctrl.select(product)" ng-src="{{product.smallImage}}"></a>
+    </li>
   </ul>
 </div>
 
@@ -22,22 +15,22 @@
     <button>+10&#162;</button>
     <button>+25&#162;</button>
     <p>Balance: $0.00<br><br>
-      <input placeholder="Credit Card Number"><button ng-click="$ctrl.test()">Authorize</button>
+      <input placeholder="Credit Card Number"><button>Authorize</button>
     </div>
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Selection</h3>
+          <h3 class="panel-title">Selected Product</h3>
         </div>
         <div class="panel-body">
           <div class="media">
             <div class="media-left media-middle">
-              <img class="media-object" ng-src="images/cocacola.png">
+              <img ng-if="$ctrl.products" class="media-object" ng-src="{{$ctrl.selectedProduct.largeImage}}">
             </div>
             <div class="media-body">
-              <h4 class="media-heading">CocaCola</h4>
-              <p>Price: $1.00<br>
-                 Qty Remaining: 5</p>
+              <h4 class="media-heading">{{$ctrl.selectedProduct.name}}</h4>
+              <p>Price: {{$ctrl.selectedProduct.price | currency:'$'}}<br>
+                 Qty Remaining: {{$ctrl.selectedProduct.qty}}</p>
                  <br>
                  <button>Dispense</button>
             </div>
