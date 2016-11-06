@@ -16,16 +16,12 @@ angular.module('vendingMachineApp')
       replace: true,
       bindToController: {
         balance: '=',
-        creditAuthorized: '='
+        creditCardNumber: '=',
+        creditAuthorized: '=',
+        authCodes: '='
       },
       controller: function($timeout, usSpinnerService) {
         var self = this;
-
-        self.authCodes = {
-          awaitingAuth: 0,
-          authorized: 1,
-          failed: 2
-        };
 
         self.creditAuthorized = self.authCodes.awaitingAuth;
 

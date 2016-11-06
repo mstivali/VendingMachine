@@ -7,9 +7,9 @@
 <button ng-click="$ctrl.returnCoins()">Return Coins</button>
 <p>Balance: {{$ctrl.balance | currency:'$'}}<br>
 
-<form ng-submit="$ctrl.authorize($ctrl.creditCardNumber)">
-  <input ng-model="$ctrl.creditCardNumber" placeholder="Credit Card Number">
-  <button type="submit">Authorize</button>
+<form name="creditCardAuth" ng-submit="$ctrl.authorize($ctrl.creditCardNumber)">
+  <input ng-model="$ctrl.creditCardNumber" placeholder="Credit Card Number" required>
+  <button ng-disabled="creditCardAuth.$invalid" type="submit">Authorize</button>
   <button ng-click="$ctrl.cancel()" type="reset">Cancel</button>
   <strong><p ng-if="$ctrl.creditAuthorized === 1" style="color:green;">Authorized</p></strong>
   <strong><p ng-if="$ctrl.creditAuthorized === 2" style="color:red;">Invalid Card Number</p></strong>

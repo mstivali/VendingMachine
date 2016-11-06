@@ -2,7 +2,12 @@
 <menu products="$ctrl.products" selected-product="$ctrl.selectedProduct"></menu>
 
 <div class="container">
-  <payments balance="$ctrl.balance" credit-authorized="$ctrl.creditAuthorized"></payments>
+  <payments
+    balance="$ctrl.balance",
+    credit-card-number="$ctrl.creditCardNumber"
+    credit-authorized="$ctrl.creditAuthorized"
+    auth-codes="$ctrl.authCodes">
+  </payments>
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -18,7 +23,7 @@
             <p>Price: {{$ctrl.selectedProduct.price | currency:'$'}}<br>
               Qty Remaining: {{$ctrl.selectedProduct.qty}}</p>
               <br>
-              <button>Dispense</button>
+              <button ng-click="$ctrl.dispense()">Dispense</button>
             </div>
           </div>
         </div>
