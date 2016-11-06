@@ -42,7 +42,7 @@ Software Requirements:
 
 -Latest versions of nodeJS and npm
 
-To run product, run the following:
+To run VendingMachine solution, execute the following commands:
 
 $ cd Vending Machine
 $ ./install.sh
