@@ -4,10 +4,12 @@
  * @ngdoc directive
  * @name vendingMachineApp.directive:productSelection
  * @description
- * # productSelection
+ * # productSelection component displays the selected product
+ * # and enables the user to dispense the product, displaying
+ * # appropriate error messages when required
  */
 angular.module('vendingMachineApp')
-  .directive('productSelection', function () {
+  .directive('productSelection', function (Notification) {
     return {
       scope: {},
       replace: true,
@@ -25,7 +27,6 @@ angular.module('vendingMachineApp')
         self.dispense = function() {
           if((self.selectedProduct.price === self.balance || self.creditAuthorized)
               && self.selectedProduct.qty > 0) {
-              console.log(self.selectedProduct.qty);
               for(var i=0; i<self.products.length; i++) {
                 if(self.products[i].id === self.selectedProduct.id
                     && self.products[i].qty > 0) {
@@ -34,14 +35,14 @@ angular.module('vendingMachineApp')
               }
               resetCoins();
               resetCreditAuth();
-              console.log("Dispensed product");
+              Notification.success({message: 'Dispensed Product', positionX: 'center', positionY: 'top'});
           } else if(!self.creditAuthorized && self.balance === 0.0) {
-              console.log("Please add payment");
+              Notification.error({message: 'Please add payment.', positionY: 'top', positionX: 'center'});
           } else if(self.balance > self.selectedProduct.price || self.balance < self.selectedProduct.price) {
               resetCoins();
-              console.log("Please deposit exact amount in coins");
+              Notification.error({message: 'Please deposit exact amount in coins.', positionY: 'top', positionX: 'center'});
           } else if(self.selectedProduct.qty === 0) {
-              console.log("Product is sold out");
+              Notification.error({message: 'Product is sold out.', positionY: 'top', positionX: 'center'});
           }
         };
 

@@ -16,7 +16,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'angularSpinner'
+    'angularSpinner',
+    'ui-notification'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/');
