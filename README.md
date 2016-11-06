@@ -36,15 +36,17 @@ dispense change
 
 Solution:
 
-Required tools:
+# VendingMachine
 
-1) nodeJS and npm
+Software Requirements:
 
-2) bower cli
+-Latest versions of nodeJS and npm
 
-3) grunt cli
+To run product, run the following:
 
-# vending-machine
+$ cd Vending Machine
+$ ./install.sh
+
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
@@ -56,4 +58,3 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
-# VendingMachine
