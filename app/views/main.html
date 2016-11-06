@@ -1,23 +1,48 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="navbar navbar-inverse navbar-fixed-left">
+  <a class="navbar-brand">Make Selection</a>
+  <ul class="nav navbar-nav">
+    <li><img ng-src="images/cocacola_sm.png"</li>
+    <li><img ng-src="images/coke-zero_sm.png"</li>
+    <li><img ng-src="images/diet-coke_sm.png"</li>
+    <li><img ng-src="images/mirinda_sm.png"</li>
+    <li><img ng-src="images/nescafe_sm.png"</li>
+    <li><img ng-src="images/sprite_sm.png"</li>
+    <li><img ng-src="images/heineken_sm.png"</li>
+    <li><img ng-src="images/fanta_sm.png"</li>
+    <li><img ng-src="images/corona_sm.png"</li>
+    <li><img ng-src="images/duff_sm.png"</li>
+  </ul>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+<div class="container">
+  <div class="page-header">
+    <h3>Payments<small> Add Coins or Authorize Credit Card</small></h3>
+    <button>+1&#162;</button>
+    <button>+5&#162;</button>
+    <button>+10&#162;</button>
+    <button>+25&#162;</button>
+    <p>Balance: $0.00<br><br>
+      <input placeholder="Credit Card Number"><button>Authorize</button>
+    </div>
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Selection</h3>
+        </div>
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left media-middle">
+              <img class="media-object" ng-src="images/cocacola.png">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">CocaCola</h4>
+              <p>Price: $1.00<br>
+                 Qty Remaining: 5</p>
+                 <br>
+                 <button>Dispense</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
