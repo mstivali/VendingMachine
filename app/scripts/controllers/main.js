@@ -8,7 +8,7 @@
  * Controller of the vendingMachineApp
  */
 angular.module('vendingMachineApp')
-  .controller('MainCtrl', function ($timeout, usSpinnerService, MainService) {
+  .controller('MainCtrl', function (MainService) {
 
     var self = this;
 
