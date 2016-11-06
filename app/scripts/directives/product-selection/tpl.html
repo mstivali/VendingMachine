@@ -10,8 +10,9 @@
         </div>
         <div class="media-body">
           <h4 class="media-heading">{{$ctrl.selectedProduct.name}}</h4>
+          <p>Item Number: {{$ctrl.selectedProduct.id}}</p>
           <p>Price: {{$ctrl.selectedProduct.price | currency:'$'}}<br>
-            Qty Remaining: {{$ctrl.selectedProduct.qty}}</p>
+            Qty Remaining: {{$ctrl.selectedProduct.qty === 0 ? 'Sold Out' : $ctrl.selectedProduct.qty }}</p>
             <br>
             <button ng-click="$ctrl.dispense()">Dispense</button>
           </div>
