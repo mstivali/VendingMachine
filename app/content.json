@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "CocaCola",
+    "smallImage": "images/cocacola_sm.png",
+    "largeImage": "images/cocacola.png",
+    "qty": 5,
+    "price": 1.00
+  },
+  {
+    "id": 2,
+    "name": "Coke Zero",
+    "smallImage": "images/coke-zero_sm.png",
+    "largeImage": "images/coke-zero.png",
+    "qty": 5,
+    "price": 1.00
+  },
+  {
+    "id": 3,
+    "name": "Diet Coke",
+    "smallImage": "images/diet-coke_sm.png",
+    "largeImage": "images/diet-coke.png",
+    "qty": 5,
+    "price": 1.00
+  },
+  {
+    "id": 4,
+    "name": "Mirinda",
+    "smallImage": "images/mirinda_sm.png",
+    "largeImage": "images/mirinda.png",
+    "qty": 5,
+    "price": 1.00
+  },
+  {
+    "id": 5,
+    "name": "Nescafe",
+    "smallImage": "images/nescafe_sm.png",
+    "largeImage": "images/nescafe.png",
+    "qty": 5,
+    "price": 1.50
+  },
+  {
+    "id": 6,
+    "name": "Sprite",
+    "smallImage": "images/sprite_sm.png",
+    "largeImage": "images/sprite.png",
+    "qty": 5,
+    "price": 1.00
+  },
+  {
+    "id": 7,
+    "name": "Heineken",
+    "smallImage": "images/heineken_sm.png",
+    "largeImage": "images/heineken.png",
+    "qty": 5,
+    "price": 6.00
+  },
+  {
+    "id": 8,
+    "name": "Fanta",
+    "smallImage": "images/fanta_sm.png",
+    "largeImage": "images/fanta/png",
+    "qty": 5,
+    "price": 1.00
+  },
+  {
+    "id": 9,
+    "name": "Corona",
+    "smallImage": "images/corona_sm.png",
+    "largeImage": "images/corona.png",
+    "qty": 5,
+    "price": 6.00
+  },
+  {
+    "id": 10,
+    "name": "Duff Soda",
+    "smallImage": "images/duff_sm.png",
+    "largeImage": "images/duff.png",
+    "qty": 5,
+    "price": 1.00
+  }
+]
