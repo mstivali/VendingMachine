@@ -8,25 +8,12 @@
     credit-authorized="$ctrl.creditAuthorized"
     auth-codes="$ctrl.authCodes">
   </payments>
-  <div class="row">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Selected Product</h3>
-      </div>
-      <div class="panel-body">
-        <div class="media">
-          <div class="media-left media-middle">
-            <img ng-if="$ctrl.products" class="media-object" ng-src="{{$ctrl.selectedProduct.largeImage}}">
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">{{$ctrl.selectedProduct.name}}</h4>
-            <p>Price: {{$ctrl.selectedProduct.price | currency:'$'}}<br>
-              Qty Remaining: {{$ctrl.selectedProduct.qty}}</p>
-              <br>
-              <button ng-click="$ctrl.dispense()">Dispense</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <product-selection
+    products="$ctrl.products"
+    selected-product="$ctrl.selectedProduct"
+    balance="$ctrl.balance"
+    credit-authorized="$ctrl.creditAuthorized"
+    auth-codes="$ctrl.authCodes"
+    credit-card-number="$ctrl.creditCardNumber">
+  </product-selection>
 </div>
