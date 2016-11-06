@@ -1,0 +1,8 @@
+<div class="navbar navbar-inverse navbar-fixed-left">
+  <a class="navbar-brand">Make Selection</a>
+  <ul class="nav navbar-nav">
+    <li ng-if="$ctrl.products" ng-repeat="product in $ctrl.products">
+      <a><img ng-click="$ctrl.select(product)" ng-src="{{product.smallImage}}"></a>
+    </li>
+  </ul>
+</div>
