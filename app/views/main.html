@@ -2,6 +2,7 @@
 <menu products="$ctrl.products" selected-product="$ctrl.selectedProduct"></menu>
 
 <div class="container">
+  <button class="pull-right" ng-click="$ctrl.reset()">Reset</button>
   <payments
     balance="$ctrl.balance",
     credit-card-number="$ctrl.creditCardNumber"

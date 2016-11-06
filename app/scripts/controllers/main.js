@@ -13,15 +13,23 @@ angular.module('vendingMachineApp')
 
     var self = this;
 
+    function init() {
+      MainService.getProducts().then(function(products) {
+        self.products = products;
+        self.selectedProduct = self.products[0];
+      });
+    }
+
+    init();
+
     self.products = [];
     self.selectedProduct = {};
     self.balance = 0.0;
     self.authCodes = {awaitingAuth: 0,authorized: 1,failed: 2};
     self.creditAuthorized = 0;
 
-    MainService.getProducts().then(function(products) {
-      self.products = products;
-      self.selectedProduct = self.products[0];
-    });
-    
+    self.reset = function() {
+      init();
+    }
+
   });
