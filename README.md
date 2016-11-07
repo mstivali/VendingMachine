@@ -41,6 +41,7 @@ Solution:
 Software Requirements:
 
 -Latest versions of nodeJS and npm
+-Supported Browser: Chrome (tested on Version 54.0.2840.71)
 
 To run VendingMachine solution, execute the following commands:
 
